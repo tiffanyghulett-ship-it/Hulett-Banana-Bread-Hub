@@ -85,6 +85,130 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
   margin: 20px auto;
   border-radius: 10px;
 }
+
+  /* ===== HUB FALL FAVORITES + LEAVING THE HUB ===== */
+
+.hub-seasonal {
+  padding: 40px 20px;
+  background: var(--cream);
+}
+
+.seasonal-section {
+  max-width: 1100px;
+  margin: 0 auto 55px;
+}
+
+.seasonal-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.seasonal-small {
+  display: block;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.seasonal-heading h2 {
+  color: var(--ink);
+  font-size: 32px;
+  margin: 5px 0 10px;
+}
+
+.seasonal-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.seasonal-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.seasonal-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.seasonal-card-content {
+  padding: 18px;
+}
+
+.seasonal-card h3 {
+  color: var(--ink);
+  font-size: 21px;
+  margin: 0 0 8px;
+}
+
+.seasonal-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.fall-badge {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--gold);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.leaving-hub {
+  border-top: 2px solid var(--gold);
+  padding-top: 45px;
+}
+
+.leaving-label {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: var(--ink);
+  color: white;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .seasonal-heading h2 {
+    font-size: 27px;
+  }
+
+  .seasonal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonal-card img {
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+  }
+}
+
 </style>
 
 </head>
@@ -140,7 +264,148 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
 </p>
 
 <p class="featured-note">Limited-Time Featured Flavor</p>
-</section><section id="story"><div class="wrap story"><div class="photo"><img src="cover.PNG" alt="Sliced banana bread"></div><div><div class="eyebrow">Our Heritage</div><h2>Granny's Recipe, <span style="color: #B07A20; font-style: italic;">A Mother's Touch</span> &amp; A Daughter's Legacy</h2>Every loaf starts with Granny's recipe and my Mother's touch—a recipe shared with love through our family for years. My mom was incredibly patient and genuinely devoted to teaching me everything step by step, ensuring I could carry on our family's recipe while preserving the love and tradition that has been passed down through generations. Over time, I decided to add my own signature touch — a sweet brown sugar glaze — while still staying true to the recipe and traditions that started it all. Our commiment to baking your bread fresh to order and with our simple ingredients will always remain a priority. This is more than banana bread to us here at Hulett Banana Bread Hub. It's a trasured family recipe, woven with memories, traditions and a little twist of my own. Don't split! Peel on over to our Facebook to see what seasonal loaves we're offering this month!
+</section>
+  
+<!-- ========================================
+     HUB SEASONAL FAVORITES
+========================================= -->
+
+<section class="hub-seasonal">
+
+  <!-- HUB FALL FAVORITES -->
+  <div class="seasonal-section fall-favorites">
+
+    <div class="seasonal-heading">
+      <span class="seasonal-small">COZY SEASON AT THE HUB</span>
+      <h2>🍂 Hub Fall Favorites 🍂</h2>
+      <p>
+        A collection of our fall-inspired banana bread favorites,
+        baked fresh to order with all the spices and flavors of the season.
+      </p>
+    </div>
+
+    <div class="seasonal-grid">
+
+      <!-- FALL FLAVOR 1 -->
+      <div class="seasonal-card">
+
+        <!-- PUT YOUR FIRST FALL PHOTO HERE -->
+        <img src="smores-banana-bread.png" alt="Fall banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>S'mores</h3>
+          <p>Classic Banana Bread with a buttery graham cracker crust, chocolate chips, toasted marshmallows, graham cracker creumbs and our signature brown sugar glaze!</p>
+          <span class="fall-badge">Fall Favorite</span>
+        </div>
+
+      </div>
+
+
+      <!-- FALL FLAVOR 2 -->
+      <div class="seasonal-card">
+
+        <!-- PUT YOUR SECOND FALL PHOTO HERE -->
+        <img src="pumpkinb.PNG" alt="Fall banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>Pumpkin Bread</h3>
+          <p>A Cozy fall classic with fresh roasted pumpkin, light seasonal spices, baked until perfectly soft and topped with our signature brown glaze!</p>
+          <span class="fall-badge">Fall Favorite</span>
+        </div>
+
+      </div>
+
+        <!-- FALL FLAVOR 3 -->
+      <div class="seasonal-card">
+
+        <!-- PUT YOUR THIRD FALL PHOTO HERE -->
+        <img src="pumpkinbb.PNG" alt="Fall banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>Pumpkin Banana Bread</h3>
+          <p>Classic Banana Bread blended with fresh roasted pumpkin creating an irresistably soft texture and topped with our signature brown sugar glaze delivering a rich fall flavor! </p>
+          <span class="fall-badge">Fall Favorite</span>
+        </div>
+
+      </div>
+
+
+      <!-- FALL FLAVOR 4 -->
+      <div class="seasonal-card">
+
+        <!-- PUT YOUR FOURTH FALL PHOTO HERE -->
+        <img src="biscoffloaf.jpg" alt="Fall banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>Biscoff Banana Bread</h3>
+          <p>Classic Banana Bread woven with caramelized Biscoff notes, layered over a buttery brown sugar Biscoff cookie base and finished with homemade cookie butter drizzle and a signature Biscoff cookie!</p>
+          <span class="fall-badge">Fall Favorite</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================
+       LEAVING THE HUB
+  ========================================= -->
+
+  <div class="seasonal-section leaving-hub">
+
+    <div class="seasonal-heading">
+      <span class="seasonal-small">GET 'EM BEFORE THEY'RE GONE</span>
+      <h2>Leaving the Hub 🍌</h2>
+
+      <p>
+        These flavors are getting ready to leave the Hub to make
+        room for something new. Place your order while they're
+        still available!
+      </p>
+    </div>
+
+
+    <div class="seasonal-grid">
+
+      <!-- LEAVING FLAVOR 1 -->
+      <div class="seasonal-card leaving-card">
+
+        <div class="leaving-label">LEAVING SOON</div>
+
+        <!-- PUT YOUR FIRST LEAVING PHOTO HERE -->
+        <img src="blkberryloaf.PNG" alt="Leaving soon banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>Flavor Name</h3>
+          <p>Add your flavor description here.</p>
+        </div>
+
+      </div>
+
+
+      <!-- LEAVING FLAVOR 2 -->
+      <div class="seasonal-card leaving-card">
+
+        <div class="leaving-label">LEAVING SOON</div>
+
+        <!-- PUT YOUR SECOND LEAVING PHOTO HERE -->
+        <img src="creamcheeseicing.PNG" alt="Leaving soon banana bread flavor">
+
+        <div class="seasonal-card-content">
+          <h3>Flavor Name</h3>
+          <p>Add your flavor description here.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>  
+  
+  
+  <section id="story"><div class="wrap story"><div class="photo"><img src="cover.PNG" alt="Sliced banana bread"></div><div><div class="eyebrow">Our Heritage</div><h2>Granny's Recipe, <span style="color: #B07A20; font-style: italic;">A Mother's Touch</span> &amp; A Daughter's Legacy</h2>Every loaf starts with Granny's recipe and my Mother's touch—a recipe shared with love through our family for years. My mom was incredibly patient and genuinely devoted to teaching me everything step by step, ensuring I could carry on our family's recipe while preserving the love and tradition that has been passed down through generations. Over time, I decided to add my own signature touch — a sweet brown sugar glaze — while still staying true to the recipe and traditions that started it all. Our commiment to baking your bread fresh to order and with our simple ingredients will always remain a priority. This is more than banana bread to us here at Hulett Banana Bread Hub. It's a trasured family recipe, woven with memories, traditions and a little twist of my own. Don't split! Peel on over to our Facebook to see what seasonal loaves we're offering this month!
 If you've had the pleasure of trying our loaves, please help us earn Google and Facebook reviews. We'd go bananas to hear what you 'loaved' about our homemade banana bread! </p><p>Whether you're buying a loaf for breakfast, dessert, a gift, or just because, I hope it brings comfort and happiness to your table.</p></div></div></section>
 <section id="menu"><div class="wrap"><div class="section-title"><div class="eyebrow">The Sculptural Menu</div><h2>Choose Your <span class="gold">Loaf</span></h2></div><div class="menu">
 <article class="card"><img src="newpetal.PNG"><div class="body"><div class="head"><h3>Petal</h3><span class="tag">Soft-bloomed crown</span></div><div class="price"><span>11&quot; × 6&quot; × 3&quot;</span><strong>$24</strong></div><div class="price"><span>12&quot; × 6&quot; × 2&quot;</span><strong>$26</strong></div></div></article>
@@ -164,13 +429,15 @@ If you've had the pleasure of trying our loaves, please help us earn Google and 
       <img src="newswirl.PNG" alt="Swirl Banana Bread">
       <img src="newclassic.PNG" alt="Classic Banana Bread">
       <img src="Tammy.PNG" alt="Packaged Banana Bread">
-      <img src="newsmores.PNG" alt="S'mores">
       <img src="brownsugarpecan.jpg" alt="Brown Sugar Pecans">
       <img src="Biscoff_Banana_Bread.jpg" alt="Biscoff Banana Bread Loaf">
       <img src="biscofficing.jpg" alt="Biscoff Banana Bread Icing">
       <img src="blackberrymix.PNG" alt="Blackberry Mix">
       <img src="blkbrrylem.PNG" alt="Blackberry Lemon">
-      <img src="blkberryloaf.PNG" alt="Blackberry Loaf">
+      <img src="blackberrylemtwoways.jpg" alt="Blackberry Lemon Two Ways">
+      <img src="pumpkinbb.PNG" alt="Pumpkin Banana Bread">
+      <img src="pumpkinb.PNG" alt="Pumpkin Bread">
+      
     </div>
 <section id="facebook" style="padding: 25px 20px;">
   <div class="info" style="
