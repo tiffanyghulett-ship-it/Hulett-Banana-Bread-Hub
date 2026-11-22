@@ -387,26 +387,21 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
 
   
 
-/* MATCH HOW TO ORDER BOX SIZES */
-#order .order-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-template-rows: 1fr !important;
+/* FIX ACTUAL BUILD YOUR ORDER BOXES */
+#hub-shop .hub-layout {
+  grid-template-columns: 1fr 1fr !important;
   align-items: stretch !important;
-  gap: 12px !important;
 }
 
-#order .order-grid > .info {
+#hub-shop .hub-layout > .hub-panel {
   width: 100% !important;
   height: 100% !important;
-  min-width: 0 !important;
-  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 600px) {
-  #order .order-grid {
+@media (max-width: 750px) {
+  #hub-shop .hub-layout {
     grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
   }
 }
 
