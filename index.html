@@ -309,7 +309,7 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
 .order-grid, .info-grid {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-template-rows: auto !important;
+  grid-template-rows: auto auto !important;
   gap: 12px !important;
   align-items: stretch !important;
 }
@@ -367,6 +367,21 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
     width: 100%;
     max-width: 300px;
 }
+
+/* Make both order boxes equal height */
+@media (min-width: 601px) {
+    .order-grid {
+        grid-template-rows: 1fr !important;
+        align-items: stretch !important;
+    }
+
+    .order-grid > .info {
+        height: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+  
 </style>
 
 </head>
