@@ -368,16 +368,23 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
     max-width: 300px;
 }
 
-/* Make order boxes the same size */
-.order-grid {
+/* MAKE BANANA BREAD ORDER BOXES EQUAL */
+#hulett-cart,
+.hulett-cart {
+  width: 100%;
+}
+
+#hulett-cart .cart-grid,
+.hulett-cart .cart-grid {
   align-items: stretch !important;
 }
 
-.order-grid > .info {
-  width: 100% !important;
+#hulett-cart .cart-grid > *,
+.hulett-cart .cart-grid > * {
   height: 100% !important;
   box-sizing: border-box !important;
 }
+
   
 
 /* MATCH HOW TO ORDER BOX SIZES */
