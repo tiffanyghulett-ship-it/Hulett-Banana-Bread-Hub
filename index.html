@@ -368,6 +368,17 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
     max-width: 300px;
 }
 
+/* Make order boxes the same size */
+.order-grid {
+  align-items: stretch !important;
+}
+
+.order-grid > .info {
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+  
 /* Make both order boxes equal height */
 @media (min-width: 601px) {
     .order-grid {
@@ -481,7 +492,7 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
 
       </div>
  <!-- FALL FLAVOR 5 -->
-      <div class="seasonal-card" style="text-align:center; width:100%; max-width:500px; margin:0 auto; grid-column:1;">
+      <div class="seasonal-card">
 
         <!-- PUT YOUR FIFTH FALL PHOTO HERE -->
         <img src="SaltedCaramel.jpg" alt="Fall banana bread flavor">
@@ -522,7 +533,7 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
         <div class="leaving-label">LEFT THE HUB</div>
 
         <!-- PUT YOUR FIRST LEAVING PHOTO HERE -->
-        <img src="creamcheeseicing.PNG" alt="Left the Hub">
+        <img src="creamcheeseicing.PNG" alt="Left the Hub"> style="margin-left:auto; margin-right:auto;'>
 
         <div class="seasonal-card-content">
           <h3>Blackberry Lemon Banana Bread - Cream Cheese Icing</h3>
