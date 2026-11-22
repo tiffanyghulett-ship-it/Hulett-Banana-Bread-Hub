@@ -192,38 +192,92 @@
           <label for="hub-size">Size</label>
           <select id="hub-size"></select>
 
-          <div class="hub-checks">
-          <div class="hub-checks">
-            <label>
-              <input type="checkbox" value="Walnuts">
-              Walnuts
-            </label>
-            <label>
-              <input type="checkbox" value="Pecans">
-              Pecans
-            </label>
-            <label>
-              <input type="checkbox" value="Chocolate chips">
-              Chocolate chips
-            </label>
-            
+          <label>Add-ins (+$2 each per loaf)</label>
 
-<label>
+<div class="hub-checks">
 
-  <input type="checkbox" value="Macadamia nuts">
+  <label>
 
-  Macadamia nuts
+    <input type="checkbox" value="Walnuts">
 
-</label>
+    Walnuts
 
-<label>
+  </label>
 
-  <input type="checkbox" value="Raisins">
+  <label>
 
-  Raisins
+    <input type="checkbox" value="Pecans">
 
-</label>
-          </div>
+    Pecans
+
+  </label>
+
+  <label>
+
+    <input type="checkbox" value="Chocolate chips">
+
+    Chocolate chips
+
+  </label>
+
+  <label>
+
+    <input type="checkbox" value="Macadamia nuts">
+
+    Macadamia nuts
+
+  </label>
+
+  <label>
+
+    <input type="checkbox" value="Raisins">
+
+    Raisins
+
+  </label>
+
+</div>
+<label>Extra Glaze, Drizzle, Add-ins or Toppings (+$1 per loaf)</label>
+
+<div class="hub-checks">
+
+  <label>
+
+    <input type="checkbox" id="hub-extra-topping">
+
+    Yes, add extra of my loaf's included topping
+
+  </label>
+
+</div>
+<label>Is this your first order with Hulett Banana Bread Hub?</label>
+
+<div class="hub-checks">
+
+  <label>
+
+    <input type="radio" name="hub-first-time" value="Yes" onchange="document.getElementById('hub-first-discount').style.display='block'">
+
+    Yes
+
+  </label>
+
+  <label>
+
+    <input type="radio" name="hub-first-time" value="No" onchange="document.getElementById('hub-first-discount').style.display='none'">
+
+    No
+
+  </label>
+
+</div>
+
+<p id="hub-first-discount" style="display:none; font-size:13px; line-height:1.5; color:#8b6b3d;">
+
+  Welcome! As a first-time customer, you'll receive 20% off your first order. Your discount will be applied manually when your order is reviewed and confirmed.
+
+</p>
+              
 
           <label for="hub-qty">Quantity</label>
           <input id="hub-qty" type="number"
@@ -361,15 +415,16 @@
     }
 
     const extras = [
-      ...section.querySelectorAll(".hub-checks input:checked")
+     ...section.querySelectorAll('.hub-checks input[type="checkbox"]:checked:not(#hub-extra-topping)')
     ].map(x => x.value);
 
     cart.push({
       name: item.name,
       size: opt.label,
       extras,
+      extraTopping: section.querySelector("#hub-extra-topping").checked,
       qty,
-      unit: opt.price + extras.length * 2
+     unit: opt.price + extras.length * 2 + (section.querySelector("#hub-extra-topping").checked ? 1 : 0)
     });
 
     section.querySelectorAll(".hub-checks input")
@@ -408,6 +463,7 @@
       "Method: " + $("hub-method").value,
       "Date: " + $("hub-date").value,
       "Time: " + $("hub-time").value,
+      "First-Time Customer: " + (section.querySelector('input[name="hub-first-time"]:checked')?.value || "Not selected"),
       "",
       ...cart.map((x, i) =>
         `${i + 1}. ${x.name} — ${x.size}` +
@@ -415,6 +471,7 @@
         (x.extras.length
           ? " — Extras: " + x.extras.join(", ")
           : "") +
+        (x.extraTopping ? " - Extra glaze/drizzle/topping (+$1 per loaf)" : "") +
         ` — ${money(x.unit * x.qty)}`
       ),
       $("hub-method").value === "Delivery"
