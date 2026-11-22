@@ -192,7 +192,7 @@
           <label for="hub-size">Size</label>
           <select id="hub-size"></select>
 
-          <label>Extras (+$2 each per loaf)</label>
+          <div class="hub-checks">
           <div class="hub-checks">
             <label>
               <input type="checkbox" value="Walnuts">
@@ -206,6 +206,23 @@
               <input type="checkbox" value="Chocolate chips">
               Chocolate chips
             </label>
+            
+
+<label>
+
+  <input type="checkbox" value="Macadamia nuts">
+
+  Macadamia nuts
+
+</label>
+
+<label>
+
+  <input type="checkbox" value="Raisins">
+
+  Raisins
+
+</label>
           </div>
 
           <label for="hub-qty">Quantity</label>
