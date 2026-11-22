@@ -358,7 +358,15 @@ footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted)}.mobil
     width: 100% !important;
     max-width: 400px !important;
 }
-  
+
+
+  /* Center the last photo in the gallery */
+.photo-grid > :last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 300px;
+}
 </style>
 
 </head>
