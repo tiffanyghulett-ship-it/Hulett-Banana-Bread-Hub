@@ -427,8 +427,8 @@
      unit: opt.price + extras.length * 2 + (section.querySelector("#hub-extra-topping").checked ? 1 : 0)
     });
 
-    section.querySelectorAll(".hub-checks input")
-      .forEach(x => x.checked = false);
+    section.querySelectorAll('.hub-checks input[type="checkbox"]')
+  .forEach(x => x.checked = false);
 
     $("hub-qty").value = "1";
     render();
